@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2024 kimwansu
+Copyright (c) 2024 Korean Language Processing Laboratory, University of Ulsan
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +19,27 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+This license applies to the Python wrapper code locate in the `pyutagger/` directory.
+
+
+
+Other Components License
+
+The binary(such as DLL and so files) and data files provided in this package are subject to the following terms and conditions:
+
+1. Educational and Research Use:
+   - These components (binary and data files) are provided free of charge for educational and research purposes only.
+   - You are permitted to use, modify, and distribute these components within the context of academic research or education, provided that proper credit is given to "Korean Language Processing Laboratory, University of Ulsan."
+
+2. Commercial Use and Full-Performance Access:
+   - For any commercial use, or if you wish to use the software without the imposed speed limitations, you must obtain a separate license through a technology transfer agreement.
+   - To inquire about licensing terms for commercial purposes or for full-performance access, please contact FOUNDATION FOR INDUSTRY COOPERATION. UNIVERSITY OF ULSAN.
+
+3. Prohibited Uses:
+   - Use of these components in any commercial product or for any commercial service without a proper license agreement is strictly prohibited.
+   - Redistribution of these components for commercial gain is also prohibited.
+
+4. Disclaimer:
+   - These components are provided "as is" without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and non-infringement.
+   - In no event shall "Korean Language Processing Laboratory, University of Ulsan" be liable for any claim, damages, or other liability, whether in an action of contract, tort, or otherwise, arising from, out of, or in connection with the software or the use or other dealings in the software.

@@ -10,7 +10,7 @@ setup(
     long_description_content_type='text/markdown',
     description='Python wrapper for UTagger',
     author='Kim Wansu',
-    author_email='wantalia@gmail',
+    author_email='wantalia@gmail.com',
     url='http://klplab.ulsan.ac.kr',
     license='MIT',
     python_requires='>=3.7',

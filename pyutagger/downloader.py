@@ -97,6 +97,9 @@ def install_utagger(ver='utagger4', user_install_path=''):
         elif ver == 'utagger4hj': # 유태거 4.0 훈민정음
             install_dir = os.path.join(install_path_base, 'hj_2403')
             url = 'http://203.250.77.242:8000/UTagger%ED%9B%88%EB%AF%BC%EC%A0%95%EC%9D%8C_TCM_2403.zip'
+        elif ver == 'utagger3': # 유태거 3.0
+            install_dir = os.path.join(install_path_base, 'v3_2109')
+            url = 'http://203.250.77.242:8000/utagger%20delay%202021%2009%20centos7.8%20windown%20py%20jna%20v1.2.7z'
         else:
             return False
     else:
@@ -125,7 +128,7 @@ def install_utagger(ver='utagger4', user_install_path=''):
 
 
 def test():
-    install_utagger('utagger4hj')
+    install_utagger('utagger3')
 
 
 if __name__ == '__main__':

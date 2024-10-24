@@ -116,7 +116,7 @@ def install_utagger(ver='utagger4', user_install_path=''):
         return False
     
     make_workdir(install_path_base)
-    tmp_dir = os.path.join(install_path_base + 'tmp')
+    tmp_dir = os.path.join(install_path_base, 'tmp')
     make_workdir(tmp_dir)
     
     utagger_dir_url = "http://203.250.77.242:8000/utagger_dir.json"
@@ -157,10 +157,10 @@ def install_utagger(ver='utagger4', user_install_path=''):
         local_fname = os.path.join(tmp_dir, pure_fname)
         same_file_exists = False
         if os.path.exists(local_fname) and os.path.isfile(local_fname):
-            ori_fsize = utagger_directory[ver][target_dir]['size']
+            ori_fsize = utagger_directory[f'{ver}-{tgt}'][target_dir]['size']
             local_fsize = os.path.getsize(local_fname)
             if ori_fsize == local_fsize:
-                ori_hash = utagger_directory[ver][target_dir]['hash']
+                ori_hash = utagger_directory[f'{ver}-{tgt}'][target_dir]['hash']
                 local_hash = hash_file(local_fname, fsize=local_fsize)
                 if ori_hash == local_hash:
                     same_file_exists = True

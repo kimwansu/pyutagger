@@ -32,7 +32,7 @@ class UTagger:
         self.load_ = False
         
     def __version__(self):
-        return '1.0.1.1028'
+        return '1.0.1.1030'
     
     def __del__(self):
         self.release()

@@ -32,7 +32,7 @@ class UTagger:
         self.load_ = False
         
     def __version__(self):
-        return '0.9.1.578'
+        return '1.0.1.1028'
     
     def __del__(self):
         self.release()
@@ -90,8 +90,7 @@ class UTagger4:
         
         self.utg4_path = utg4_path
         os_name = platform.system()
-        lib_ext = '.dll' if os_name == 'Windows' else '.so'
-        self.utg4_lib_fname = 'bin\\LibUMA4' + lib_ext
+        self.utg4_lib_fname = 'bin\\LibUMA4.dll' if os_name == 'Windows' else 'bin/UTagger4.so'
         self.utg4_lib = None
         
     def __del__(self):
@@ -141,8 +140,7 @@ class UTagger3:
         
         self.utg3_path = utg3_path
         os_name = platform.system()
-        lib_ext = '.dll' if os_name == 'Windows' else '.so'
-        self.utg3_lib_fname = 'bin\\UTaggerR64' + lib_ext
+        self.utg3_lib_fname = 'bin\\UTaggerR64.dll' if os_name == 'Windows' else 'bin/UTagger.so'
         self.utg3_lib = None
         
         self.th_num = th_num

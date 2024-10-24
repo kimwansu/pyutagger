@@ -3,13 +3,14 @@ UTagger python wrapper
 
 ## 1. 유태거 다운로드
 ```py
-import pyutagger.downloader as ut
+import pyutagger.downloader as ud
 # 필요에 따라 아래 두 가지 중 필요한 것을 다운로드한다.
 # 기본적으로 윈도우에서는 c:\utagger에 다운로드를 시도한다.
 # 다른 드라이브 또는 디렉토리에 설치하려면 추가 인자로 절대 경로를 추가하면 된다.
 # 그러면 지정한 경로 밑에서 다운로드와 압축 해제가 진행된다.
-ut.install_utagger('utagger4')    # 유태거 4
-ut.install_utagger('utagger4hj')  # 유태거 4 훈민정음(옛한글 전용)
+ud.install_utagger('utagger3')    # 유태거 3
+ud.install_utagger('utagger4')    # 유태거 4
+ud.install_utagger('utagger4hj')  # 유태거 4 훈민정음(옛한글 전용)
 ```
 
 ## 2. 유태거 사용
@@ -24,7 +25,7 @@ def test():
         sys.exit(1)
         
     utg4.load()
-    print(utg4.tagger_name)
+    print(utg4.tagger_name())
     s = '대통령배생존대회에서 배가침몰하는중에도 배씨는배를먹으면서 배를채우고 배영하며 버티는데 나보다두배는더용감했다.'
     print('원문: ', s)
     tagged = utg4.analyse(s)

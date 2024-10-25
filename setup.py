@@ -5,7 +5,7 @@ with open('README.md', encoding='utf-8') as f:
 
 setup(
     name='pyutagger',
-    version='1.0.1.1030',
+    version='1.0.1.1031',
     long_description=long_desc,
     long_description_content_type='text/markdown',
     description='Python wrapper for UTagger',

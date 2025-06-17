@@ -233,18 +233,18 @@ def update_utagger_data(ver='utagger4'):
         
     elif '4' in ver:
         # 유태거4(훈민정음 포함)는 MFL_data/MFL_data_UMA4/config.txt 파일을 백업한다.
-        utg_bin_config_fname = os.path.join(utagger_path_dir, 'MFL_data/MFL_data_UMA4/config.txt')
-        bak_config_fname = os.path.join(utagger_path_dir, f'config.txt.bak')
-        data_path = os.path.join(utagger_path_dir, 'MFL_data')
+        data_path = os.path.join(utagger_path_dir, 'MFL_data/MFL_data_UMA4/')
+        utg_bin_config_fname = os.path.join(data_path, 'config.txt')
+        bak_config_fname = os.path.join(data_path, f'config.txt.bak')
         cuscor_fname = os.path.join(data_path, 'cus cor.tag')
-        bak_cuscor_fname = os.path.join(utagger_path_dir, 'cus cor.tag.bak')
+        bak_cuscor_fname = os.path.join(data_path, 'cus cor.tag.bak')
 
     else:
         print('잘못된 버전 지정: ', ver)
         return False
     
-        
-    if os.path.exists(bak_config_fname):
+    
+    if os.path.exists(utg_bin_config_fname) and  os.path.exists(bak_config_fname):
         for i in range(1, 100):
             alt_bak_config_fname = bak_config_fname[:-4] + f'_{i}.bak'
             if not os.path.exists(alt_bak_config_fname):
@@ -252,9 +252,9 @@ def update_utagger_data(ver='utagger4'):
                 print(f'기존 설정 파일은 {bak_config_fname}으로 백업했습니다.')
                 break
  
-    os.rename(utg_bin_config_fname, bak_config_fname)
+        os.rename(utg_bin_config_fname, bak_config_fname)
     
-    if os.path.exists(bak_cuscor_fname):
+    if os.path.exists(cuscor_fname) and os.path.exists(bak_cuscor_fname):
         for i in range(1, 100):
             alt_bak_cuscor_fname = bak_cuscor_fname[:-4] + f'_{i}.bak'
             if not os.path.exists(alt_bak_cuscor_fname):
@@ -262,7 +262,7 @@ def update_utagger_data(ver='utagger4'):
                 print(f'기존 사용자 말뭉치 파일은 {bak_cuscor_fname}으로 백업했습니다.')
                 break
     
-    os.rename(cuscor_fname, bak_cuscor_fname)
+        os.rename(cuscor_fname, bak_cuscor_fname)
         
     
     url = utagger_directory[f'{ver}-data']['url']
